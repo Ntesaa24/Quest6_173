@@ -26,4 +26,10 @@ fun FormIsian(
 	OnSubmitButtonClicked : (MutableList<String>) -> Unit,
 	modifier: Modifier = Modifier
 
-)
+){
+	//edit 2 tambahkan 4 variable dibawah ini
+	var txtNama by rememberSaveable {mutableStateOf("")}
+	var txtAlamat by remember {mutableStateOf("")}
+	var txtGender by remember {mutableStateOf("")}
+	var listData: MutableList<String> = mutableListOf(txtNama,txtAlamat,txtGender)
+
