@@ -49,3 +49,26 @@ fun SiswaApp(
 					}
 				)
 			}
+			composable(route = Navigasi.Detail.name){
+				TampilSiswa(
+					statusUiSiswa = uiState.value,
+					onBackButtonClicked = {
+						cancelAndBackToFormulir(navController)
+					}
+				)
+			}
+		}
+
+	}
+}
+
+@Composable
+fun TampilSiswa(statusUiSiswa: Siswa, onBackButtonClicked: () -> Unit) {
+	TODO("Not yet implemented")
+}
+
+fun cancelAndBackToFormulir(
+	navController: NavController
+) {
+	navController.popBackStack(Navigasi.Formulir.name, inclusive = false)
+}
