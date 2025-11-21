@@ -39,3 +39,14 @@ fun TampilData(
 		Pair(stringResource(id=R.string.jenis_kelamin), statusUiSiswa.gender),
 		Pair(stringResource(id=R.string.alamat), statusUiSiswa.alamat)
 	)
+	Scaffold (modifier = Modifier,
+		topBar = {
+			TopAppBar(
+				title = {Text(text = stringResource(id=R.string.tampil), color = Color.White)},
+				colors = TopAppBarDefaults.mediumTopAppBarColors(colorResource(id=R.color.pink_pastel))
+			)
+		}){ isiRuang->
+		Column (
+			modifier = Modifier.padding(isiRuang),
+			verticalArrangement = Arrangement.SpaceBetween
+		)
